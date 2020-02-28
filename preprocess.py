@@ -20,7 +20,7 @@ csv_pegawai=r"C:\Users\redy.andriyansah\Documents\project\competence_analytics\d
 #                         row_start_idx=1,
 #                         column_idx=[-2,-1])
 
-# csv_nip_training=r"C:\Users\redy.andriyansah\Documents\project\competence_analytics\doc2vec\doc2vec-master\data\pegawai_training.csv"
+# csv_nip_training=r"C:\Users\redy.andriyansah\Documents\project\competence_analytics\doc2vec\doc2vec-master\data\training_nipname.csv"
 # tool.merge_csv(csv_path1=csv_p,
 #                csv_path2=csv_pegawai,
 #                csv_dest=csv_nip_training,
@@ -28,12 +28,23 @@ csv_pegawai=r"C:\Users\redy.andriyansah\Documents\project\competence_analytics\d
 #                join_op="left",
 #                join_col="name")
 
+name_nip=r"C:\Users\redy.andriyansah\Documents\project\competence_analytics\doc2vec\doc2vec-master\data\name_nip.csv"
+disposisi_nip=r"C:\Users\redy.andriyansah\Documents\project\competence_analytics\doc2vec\doc2vec-master\data\disposisi_normalized_pusintek2.csv"
+disposisi_nipname=r"C:\Users\redy.andriyansah\Documents\project\competence_analytics\doc2vec\doc2vec-master\data\disposisi_nipname.csv"
+tool.merge_csv(csv_path1=disposisi_nip,
+               csv_path2=name_nip,
+               csv_dest=disposisi_nipname,
+               sep=";",
+               join_op="left",
+               join_col="nip",
+               out_cols=["disposisi","nip"])
+
 # disposisi_path=r"C:\Users\redy.andriyansah\Documents\project\competence_analytics\doc2vec\doc2vec-master\data\disposisi_pusintek.csv"
 # disposisi_normalized_path=r"C:\Users\redy.andriyansah\Documents\project\competence_analytics\doc2vec\doc2vec-master\data\disposisi_normalized_pusintek.csv"
 # tool.replace_string_in_file(file_path=disposisi_path,
 #                             file_path_dest=disposisi_normalized_path)
 
 
-disposisi_normalized_path=r"C:\Users\redy.andriyansah\Documents\project\competence_analytics\doc2vec\doc2vec-master\data\disposisi_normalized_pusintek.csv"
-disposisi_normalized_path2=r"C:\Users\redy.andriyansah\Documents\project\competence_analytics\doc2vec\doc2vec-master\data\disposisi_normalized_pusintek2.csv"
-tool.switch_columns(disposisi_normalized_path,disposisi_normalized_path2)
+# disposisi_normalized_path=r"C:\Users\redy.andriyansah\Documents\project\competence_analytics\doc2vec\doc2vec-master\data\disposisi_normalized_pusintek.csv"
+# disposisi_normalized_path2=r"C:\Users\redy.andriyansah\Documents\project\competence_analytics\doc2vec\doc2vec-master\data\disposisi_normalized_pusintek2.csv"
+# tool.switch_columns(disposisi_normalized_path,disposisi_normalized_path2)

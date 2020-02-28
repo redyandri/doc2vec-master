@@ -262,17 +262,12 @@ class victorinox(object):
                            data_xls2,
                            how=join_op,
                            on=join_col)
+        data_xls3["nip"]=data_xls3["nip"]+"_"+data_xls3["name"]
         if out_cols!= None:
-            data_xls3[out_cols].to_csv(csv_dest,
-                            encoding='utf-8',
-                            index=False,
-                            sep=";")
+            data_xls3[out_cols].to_csv(csv_dest,encoding='utf-8',index=False,sep=";")
         else:
-            data_xls3.to_csv(csv_dest,
-                                       encoding='utf-8',
-                                       index=False,
-                                       sep=";")
-        return("done on %d rows"%data_xls3.shape[0])
+            data_xls3.to_csv(csv_dest,encoding='utf-8',index=False,sep=";")
+        print("done on %d rows"%data_xls3.shape[0])
 
     def replace_string_in_file(self,
                                file_path="",
