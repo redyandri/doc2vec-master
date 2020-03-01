@@ -3,6 +3,11 @@ import pandas as pd
 import numpy as np
 import re
 import csv
+from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory,StopWordRemover,ArrayDictionary
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+from gensim.models import FastText
+from nltk.tokenize import RegexpTokenizer
+from nltk.stem.wordnet import WordNetLemmatizer
 
 
 class victorinox(object):
@@ -308,8 +313,55 @@ class victorinox(object):
                   header=None,
                                    index=None)
 
+    def lower_contents(self,
+                       csv_src="",
+                       csv_dest="",
+                       sep=";"):
+        df=pd.read_csv(csv_src,sep=sep)
+        for c in df.columns:
+            df[c]=df[c].str.lower()
+        df.to_csv(csv_dest,sep=sep,index=None)
+        print("lower %d rows"%len(df))
 
 
+    def remove_stopwords(self,csv_src="",
+                         csv_dest="",
+                         cols_to_clean=["KOMPETENSI"],
+                         sep=";"):
+        #factory = StopWordRemoverFactory()
+        default_stopwords = StopWordRemoverFactory().get_stop_words()
+        additional_stopwords=["(",")","senin","selasa","rabu","kamis","jumat","sabtu","minggu"]
+        dictionary=ArrayDictionary(default_stopwords+additional_stopwords)
+        stopword = StopWordRemover(dictionary)#factory.create_stop_word_remover(dictionary = dictionary)
+        tokenizer = RegexpTokenizer(r'\w+')
+        df = pd.read_csv(csv_src, sep=sep)
+        for c in cols_to_clean:
+            df[c] = df[c].map(lambda x: " ".join(tokenizer.tokenize(x)))    #get only words without symbols
+            df[c]=df[c].map(lambda x:stopword.remove(x))                    #remove stop words
+        df.to_csv(csv_dest, sep=sep, index=None)
+        print("lower %d rows" % len(df))
+
+
+    def stem(self,csv_src="",
+                         csv_dest="",
+                         cols_to_clean="KOMPETENSI",
+                         sep=";"):
+        factory = StemmerFactory()
+        stemmer = factory.create_stemmer()
+        df = pd.read_csv(csv_src, sep=sep)
+        df[cols_to_clean]=df[cols_to_clean].astype(str)
+        df[cols_to_clean] = df[cols_to_clean].map(lambda x: stemmer.stem(x))
+        df.to_csv(csv_dest, sep=sep, index=None)
+        print("lower %d rows" % len(df))
+
+    def create_sentence_list(self,
+                         csv_src="",
+                         csv_dest="",
+                         cols_to_write="KOMPETENSI",
+                         sep=";"):
+        df = pd.read_csv(csv_src, sep=sep)
+        df[cols_to_write].to_csv(csv_dest, sep=sep, index=None)
+        print("lower %d rows" % len(df))
 
 
 
