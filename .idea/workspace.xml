@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae7fa7fc-8726-428e-91cd-ef2715d0564c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/doc2vec-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/doc2vec-master.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/victorinox.py" beforeDir="false" afterPath="$PROJECT_DIR$/victorinox.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +40,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.preprocess">
+  <component name="RunManager" selected="Python.train">
     <configuration name="hase" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="doc2vec-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,8 +83,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="doc2vec-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.train" />
         <item itemvalue="Python.preprocess" />
         <item itemvalue="Python.hase" />
       </list>
@@ -106,33 +123,52 @@
       <option name="presentableId" value="Default" />
       <updated>1582786362171</updated>
     </task>
+    <task id="LOCAL-00001" summary="prep data done. ready for embedding">
+      <created>1583057350744</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583057350744</updated>
+    </task>
+    <task id="LOCAL-00002" summary="prep data done. ready for embedding">
+      <created>1583057479251</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583057479251</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="prep data done. ready for embedding" />
+    <option name="LAST_COMMIT_MESSAGE" value="prep data done. ready for embedding" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="601" y="81" key="CommitChangelistDialog2" timestamp="1583057350520">
+    <state x="601" y="81" key="CommitChangelistDialog2" timestamp="1583057478697">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state x="601" y="81" key="CommitChangelistDialog2/65.24.1855.1056@65.24.1855.1056" timestamp="1583057350520" />
+    <state x="601" y="81" key="CommitChangelistDialog2/65.24.1855.1056@65.24.1855.1056" timestamp="1583057478697" />
     <state width="1696" height="568" key="DebuggerActiveHint" timestamp="1583056726142">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state width="1696" height="568" key="DebuggerActiveHint/65.24.1855.1056@65.24.1855.1056" timestamp="1583056726142" />
-    <state width="1832" height="295" key="GridCell.Tab.0.bottom" timestamp="1583057265301">
+    <state width="1832" height="295" key="GridCell.Tab.0.bottom" timestamp="1583061324452">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="295" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1583057265301" />
-    <state width="1832" height="295" key="GridCell.Tab.0.center" timestamp="1583057265300">
+    <state width="1832" height="295" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1583061324452" />
+    <state width="1832" height="295" key="GridCell.Tab.0.center" timestamp="1583061324452">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="295" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1583057265300" />
-    <state width="1832" height="295" key="GridCell.Tab.0.left" timestamp="1583057265300">
+    <state width="1832" height="295" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1583061324452" />
+    <state width="1832" height="295" key="GridCell.Tab.0.left" timestamp="1583061324452">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="295" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1583057265300" />
-    <state width="1832" height="295" key="GridCell.Tab.0.right" timestamp="1583057265300">
+    <state width="1832" height="295" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1583061324452" />
+    <state width="1832" height="295" key="GridCell.Tab.0.right" timestamp="1583061324452">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="295" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1583057265300" />
+    <state width="1832" height="295" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1583061324452" />
     <state width="1832" height="364" key="GridCell.Tab.1.bottom" timestamp="1583056976114">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
@@ -153,10 +189,10 @@
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="486" y="174" key="SettingsEditor/65.24.1855.1056@65.24.1855.1056" timestamp="1582905758355" />
-    <state x="592" y="275" key="Vcs.Push.Dialog.v2" timestamp="1583057450872">
+    <state x="592" y="275" key="Vcs.Push.Dialog.v2" timestamp="1583057491187">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state x="592" y="275" key="Vcs.Push.Dialog.v2/65.24.1855.1056@65.24.1855.1056" timestamp="1583057450872" />
+    <state x="592" y="275" key="Vcs.Push.Dialog.v2/65.24.1855.1056@65.24.1855.1056" timestamp="1583057491187" />
     <state x="765" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582959821173">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
