@@ -8,6 +8,7 @@ from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from gensim.models import FastText
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem.wordnet import WordNetLemmatizer
+from sklearn.metrics.pairwise import cosine_similarity
 
 
 class victorinox(object):
@@ -362,6 +363,16 @@ class victorinox(object):
         df = pd.read_csv(csv_src, sep=sep)
         df[cols_to_write].to_csv(csv_dest, sep=sep, index=None)
         print("lower %d rows" % len(df))
+
+    def document_vector(self,word2vec_model, doc):
+        # remove out-of-vocabulary words
+        doc = [word for word in doc if word in word2vec_model.wv.vocab]
+        return np.mean(word2vec_model[doc], axis=0)
+
+    def measure_similarity(self,vec1,vec2):
+        vec1=np.array(vec1).reshape(1,-1)
+        vec2 = np.array(vec2).reshape(1, -1)
+        return cosine_similarity(vec1,vec2)
 
 
 

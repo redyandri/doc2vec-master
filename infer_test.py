@@ -3,9 +3,9 @@ import gensim.models as g
 import codecs
 
 #parameters
-model="toy_data/model.bin"
-test_docs="toy_data/test_docs.txt"
-output_file="toy_data/test_vectors.txt"
+model=r"toy_data\model.bin"
+test_docs=r"toy_data\test_docs.txt"
+output_file=r"toy_data\test_vectors.txt"
 
 #inference hyper-parameters
 start_alpha=0.01
@@ -21,3 +21,5 @@ for d in test_docs:
     output.write( " ".join([str(x) for x in m.infer_vector(d, alpha=start_alpha, steps=infer_epoch)]) + "\n" )
 output.flush()
 output.close()
+
+# m.most_similar(["paris"])
