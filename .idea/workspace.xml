@@ -207,17 +207,18 @@
     <MESSAGE value="prep data done. ready for embedding" />
     <MESSAGE value="test sentence vector by average word vector" />
     <MESSAGE value="add sgdclassifier" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sgdclassifier" />
+    <MESSAGE value="add KNN" />
+    <option name="LAST_COMMIT_MESSAGE" value="add KNN" />
   </component>
   <component name="WindowStateProjectService">
     <state x="679" y="353" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583664711443">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="679" y="353" key="#com.intellij.fileTypes.FileTypeChooser/65.24.1855.1056@65.24.1855.1056" timestamp="1583664711443" />
-    <state x="601" y="81" width="782" height="913" key="CommitChangelistDialog2" timestamp="1583729955984">
+    <state x="601" y="81" width="782" height="913" key="CommitChangelistDialog2" timestamp="1583749818562">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state x="601" y="81" width="782" height="913" key="CommitChangelistDialog2/65.24.1855.1056@65.24.1855.1056" timestamp="1583729955984" />
+    <state x="601" y="81" width="782" height="913" key="CommitChangelistDialog2/65.24.1855.1056@65.24.1855.1056" timestamp="1583749818562" />
     <state width="1696" height="568" key="DebuggerActiveHint" timestamp="1583687013271">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
@@ -230,22 +231,22 @@
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="779" y="296" width="424" height="482" key="FileChooserDialogImpl/65.24.1855.1056@65.24.1855.1056" timestamp="1583740192787" />
-    <state width="1832" height="275" key="GridCell.Tab.0.bottom" timestamp="1583746031419">
+    <state width="1832" height="275" key="GridCell.Tab.0.bottom" timestamp="1583749849679">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="275" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1583746031419" />
-    <state width="1832" height="275" key="GridCell.Tab.0.center" timestamp="1583746031419">
+    <state width="1832" height="275" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1583749849679" />
+    <state width="1832" height="275" key="GridCell.Tab.0.center" timestamp="1583749849678">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="275" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1583746031419" />
-    <state width="1832" height="275" key="GridCell.Tab.0.left" timestamp="1583746031419">
+    <state width="1832" height="275" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1583749849678" />
+    <state width="1832" height="275" key="GridCell.Tab.0.left" timestamp="1583749849678">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="275" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1583746031419" />
-    <state width="1832" height="275" key="GridCell.Tab.0.right" timestamp="1583746031419">
+    <state width="1832" height="275" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1583749849678" />
+    <state width="1832" height="275" key="GridCell.Tab.0.right" timestamp="1583749849679">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="275" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1583746031419" />
+    <state width="1832" height="275" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1583749849679" />
     <state width="1832" height="339" key="GridCell.Tab.1.bottom" timestamp="1583744315476">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
@@ -266,10 +267,10 @@
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="486" y="174" key="SettingsEditor/65.24.1855.1056@65.24.1855.1056" timestamp="1583227386226" />
-    <state x="592" y="275" key="Vcs.Push.Dialog.v2" timestamp="1583730213749">
+    <state x="592" y="275" key="Vcs.Push.Dialog.v2" timestamp="1583749888954">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state x="592" y="275" key="Vcs.Push.Dialog.v2/65.24.1855.1056@65.24.1855.1056" timestamp="1583730213749" />
+    <state x="592" y="275" key="Vcs.Push.Dialog.v2/65.24.1855.1056@65.24.1855.1056" timestamp="1583749888954" />
     <state width="926" height="513" key="XDebugger.FullValuePopup" timestamp="1583719062853">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
@@ -278,10 +279,10 @@
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="607" y="136" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/65.24.1855.1056@65.24.1855.1056" timestamp="1583579022543" />
-    <state x="750" y="224" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1583257983110">
+    <state x="750" y="224" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1583749629103">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state x="750" y="224" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1583257983110" />
+    <state x="750" y="224" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1583749629103" />
     <state x="765" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583499396787">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
