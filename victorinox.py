@@ -408,6 +408,23 @@ class victorinox(object):
         df3.to_csv(csv_dest,sep=";",index=None)
         print("done merging %d rows"%len(df3))
 
+    def preprocess_sentence(self,q=""):
+        #tokenize, lower, stopword,stem
+        default_stopwords = StopWordRemoverFactory().get_stop_words()
+        additional_stopwords = ["(", ")", "senin", "selasa", "rabu", "kamis", "jumat", "sabtu", "minggu"]
+        dictionary = ArrayDictionary(default_stopwords + additional_stopwords)
+        stopword = StopWordRemover(dictionary)
+        factory = StemmerFactory()
+        stemmer = factory.create_stemmer()
+        tokenizer = RegexpTokenizer(r'\w+')
+        res=" ".join(tokenizer.tokenize(q))
+        res=res.lower()
+        res=stopword.remove(res)
+        res=factory =stemmer.stem(res)
+        return res
+
+
+
 
 
 

@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae7fa7fc-8726-428e-91cd-ef2715d0564c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/note" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_tfidf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/grouping_pegawai.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/grouping_pegawai.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hase.py" beforeDir="false" afterPath="$PROJECT_DIR$/hase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_word2vec.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_word2vec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_tfidf.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_tfidf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/victorinox.py" beforeDir="false" afterPath="$PROJECT_DIR$/victorinox.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +37,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../facenet_be" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.train_tfidf">
     <configuration name="hase" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -190,23 +193,31 @@
       <option name="project" value="LOCAL" />
       <updated>1583258053212</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add sgdclassifier">
+      <created>1583729956601</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583729956601</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="prep data done. ready for embedding" />
     <MESSAGE value="test sentence vector by average word vector" />
-    <option name="LAST_COMMIT_MESSAGE" value="test sentence vector by average word vector" />
+    <MESSAGE value="add sgdclassifier" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sgdclassifier" />
   </component>
   <component name="WindowStateProjectService">
     <state x="679" y="353" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583664711443">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="679" y="353" key="#com.intellij.fileTypes.FileTypeChooser/65.24.1855.1056@65.24.1855.1056" timestamp="1583664711443" />
-    <state x="601" y="81" key="CommitChangelistDialog2" timestamp="1583258052910">
+    <state x="601" y="81" width="782" height="913" key="CommitChangelistDialog2" timestamp="1583729955984">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state x="601" y="81" key="CommitChangelistDialog2/65.24.1855.1056@65.24.1855.1056" timestamp="1583258052910" />
+    <state x="601" y="81" width="782" height="913" key="CommitChangelistDialog2/65.24.1855.1056@65.24.1855.1056" timestamp="1583729955984" />
     <state width="1696" height="568" key="DebuggerActiveHint" timestamp="1583687013271">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
@@ -215,50 +226,50 @@
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="250" y="101" key="DiffContextDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1583257999862" />
-    <state x="779" y="296" width="424" height="482" key="FileChooserDialogImpl" timestamp="1583637824339">
+    <state x="779" y="296" width="424" height="482" key="FileChooserDialogImpl" timestamp="1583740192787">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state x="779" y="296" width="424" height="482" key="FileChooserDialogImpl/65.24.1855.1056@65.24.1855.1056" timestamp="1583637824339" />
-    <state width="1832" height="275" key="GridCell.Tab.0.bottom" timestamp="1583726874892">
+    <state x="779" y="296" width="424" height="482" key="FileChooserDialogImpl/65.24.1855.1056@65.24.1855.1056" timestamp="1583740192787" />
+    <state width="1832" height="275" key="GridCell.Tab.0.bottom" timestamp="1583746031419">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="275" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1583726874892" />
-    <state width="1832" height="275" key="GridCell.Tab.0.center" timestamp="1583726874892">
+    <state width="1832" height="275" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1583746031419" />
+    <state width="1832" height="275" key="GridCell.Tab.0.center" timestamp="1583746031419">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="275" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1583726874892" />
-    <state width="1832" height="275" key="GridCell.Tab.0.left" timestamp="1583726874891">
+    <state width="1832" height="275" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1583746031419" />
+    <state width="1832" height="275" key="GridCell.Tab.0.left" timestamp="1583746031419">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="275" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1583726874891" />
-    <state width="1832" height="275" key="GridCell.Tab.0.right" timestamp="1583726874892">
+    <state width="1832" height="275" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1583746031419" />
+    <state width="1832" height="275" key="GridCell.Tab.0.right" timestamp="1583746031419">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="275" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1583726874892" />
-    <state width="1832" height="339" key="GridCell.Tab.1.bottom" timestamp="1583725197019">
+    <state width="1832" height="275" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1583746031419" />
+    <state width="1832" height="339" key="GridCell.Tab.1.bottom" timestamp="1583744315476">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="339" key="GridCell.Tab.1.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1583725197019" />
-    <state width="1832" height="339" key="GridCell.Tab.1.center" timestamp="1583725197018">
+    <state width="1832" height="339" key="GridCell.Tab.1.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1583744315476" />
+    <state width="1832" height="339" key="GridCell.Tab.1.center" timestamp="1583744315475">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="339" key="GridCell.Tab.1.center/65.24.1855.1056@65.24.1855.1056" timestamp="1583725197018" />
-    <state width="1832" height="339" key="GridCell.Tab.1.left" timestamp="1583725197018">
+    <state width="1832" height="339" key="GridCell.Tab.1.center/65.24.1855.1056@65.24.1855.1056" timestamp="1583744315475" />
+    <state width="1832" height="339" key="GridCell.Tab.1.left" timestamp="1583744315475">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="339" key="GridCell.Tab.1.left/65.24.1855.1056@65.24.1855.1056" timestamp="1583725197018" />
-    <state width="1832" height="339" key="GridCell.Tab.1.right" timestamp="1583725197018">
+    <state width="1832" height="339" key="GridCell.Tab.1.left/65.24.1855.1056@65.24.1855.1056" timestamp="1583744315475" />
+    <state width="1832" height="339" key="GridCell.Tab.1.right" timestamp="1583744315476">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="339" key="GridCell.Tab.1.right/65.24.1855.1056@65.24.1855.1056" timestamp="1583725197018" />
+    <state width="1832" height="339" key="GridCell.Tab.1.right/65.24.1855.1056@65.24.1855.1056" timestamp="1583744315476" />
     <state x="486" y="174" key="SettingsEditor" timestamp="1583227386226">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="486" y="174" key="SettingsEditor/65.24.1855.1056@65.24.1855.1056" timestamp="1583227386226" />
-    <state x="592" y="275" key="Vcs.Push.Dialog.v2" timestamp="1583258066137">
+    <state x="592" y="275" key="Vcs.Push.Dialog.v2" timestamp="1583730213749">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state x="592" y="275" key="Vcs.Push.Dialog.v2/65.24.1855.1056@65.24.1855.1056" timestamp="1583258066137" />
+    <state x="592" y="275" key="Vcs.Push.Dialog.v2/65.24.1855.1056@65.24.1855.1056" timestamp="1583730213749" />
     <state width="926" height="513" key="XDebugger.FullValuePopup" timestamp="1583719062853">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
@@ -315,38 +326,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/train_tfidf.py</url>
-          <line>89</line>
+          <line>90</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/train_tfidf.py</url>
-          <line>75</line>
+          <line>78</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/train_tfidf.py</url>
-          <line>107</line>
+          <line>108</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/train_tfidf.py</url>
-          <line>176</line>
+          <line>217</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/train_tfidf.py</url>
-          <line>206</line>
+          <line>247</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/train_tfidf.py</url>
-          <line>215</line>
+          <line>256</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/preprocess.py</url>
           <line>223</line>
           <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train_tfidf.py</url>
+          <line>150</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

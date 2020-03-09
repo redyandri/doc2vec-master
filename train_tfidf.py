@@ -13,6 +13,9 @@ import math
 import os
 from sklearn.linear_model import SGDClassifier
 from sklearn.calibration import CalibratedClassifierCV
+import heapq
+from sklearn.neighbors import KNeighborsClassifier
+
 
 
 #enable logging
@@ -78,8 +81,6 @@ tfidf_model=r"data/tfidf_group_model.pkl"
 
 
 
-
-
 # tfidf_vectors=r"data/tfidf_group_vectors.csv"
 # svc_model=r"data/svc_model.pkl"
 # df=pd.read_csv(tfidf_vectors,sep=";")
@@ -117,6 +118,46 @@ tfidf_model=r"data/tfidf_group_model.pkl"
 # print("best_class_indices:%s"%str(best_class_indices))
 # print("best_class_probabilities:%s"%str(best_class_probabilities))
 # print("employee:%s"%str(class_names[best_class_indices[0]]))
+
+
+
+df=pd.read_csv(tfidf_vectors,sep=";",header=None)
+q="application software level 1 symfoni php framework knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services seminar enterprise architecture cross platform mobile development with xamarin scrum project management workshop syncfusion framework workshop tata kelola tik bas cobit 5 international public service forum 2018 workshop mas atur presiden nomor 16 tahun 2018 ada barang jasa perintah training administrasi manajemen sdm latih uji nasional sertifikasi ahli ada barang jasa perintah"
+q2="application software level 1 symfoni php framework knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services seminar enterprise architecture cross platform mobile development with xamarin scrum project management workshop syncfusion framework workshop tata kelola tik BERbasis cobit 5 international public service forum 2018 workshop mas PERaturAN presiden nomor 16 tahun 2018 PENGadaAN barang jasa pEMerintahAN training administrasi manajemen sdm PElatihAN ujiAN nasional sertifikasi ahli PENGadaAN barang jasa pEMerintahAN "
+transformer = TfidfTransformer()
+loaded_vec = CountVectorizer(decode_error="replace",vocabulary=pickle.load(open(tfidf_model, "rb")))
+# t1=time.time()
+# qv=transformer.fit_transform(loaded_vec.fit_transform(np.array([q2]))).toarray()[0].tolist()
+# scores=[]
+# for idx,row in df.iterrows():
+#     v=row[:-1].tolist()
+#     score=1 - spatial.distance.cosine(qv,v)
+#     scores.append(score)
+# print(scores)
+# top5=heapq.nlargest(5, range(len(scores)), scores.__getitem__)
+# res=df.iloc[top5,-1]
+# elapsed=time.time()-t1
+# print(res)
+# print([scores[x] for x in top5])
+# print("elapsed:%f"%elapsed)
+print("########################################")
+print("train KNN")
+t1=time.time()
+knn = KNeighborsClassifier(n_neighbors=len(df))
+knn.fit(df.iloc[:,:-1], df.iloc[:,-1])
+print("train KNN DONE in %f"%(time.time()-t1))
+q2=tool.preprocess_sentence(q2)
+qv=transformer.fit_transform(loaded_vec.fit_transform([q])).toarray()[0].tolist()
+(distances, indices)=knn.kneighbors([qv],n_neighbors=5)
+indices=indices.tolist()[0]
+res=df.iloc[indices,-1]
+elapsed=time.time()-t1
+print(res.tolist())
+print(distances.tolist())
+
+
+
+
 
 #########################################################################################################
 
