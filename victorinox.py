@@ -374,6 +374,40 @@ class victorinox(object):
         vec2 = np.array(vec2).reshape(1, -1)
         return cosine_similarity(vec1,vec2)
 
+    def group_sentences(self,
+                        csv_src="",
+                         csv_dest="",
+                         col_to_groupby="ID_PEGAWAI",
+                         col_to_group="KOMPETENSI",
+                         sep=";"):
+        df=pd.read_csv(csv_src,sep=sep)
+        df2= df.groupby(col_to_groupby)
+        ids=[]
+        datas = []
+        for group_name, dfgroup in df2:
+            groupcontent=""
+            for idx, row in dfgroup.iterrows():
+                groupcontent+=str(row[col_to_group])+" "
+            datas.append(groupcontent)
+            ids.append(row[col_to_groupby])
+        result={col_to_groupby:ids,
+                col_to_group:datas}
+        dfresult=pd.DataFrame(result)
+        dfresult.to_csv(csv_dest, sep=sep, index=None)
+        print("group into %d rows"%len(df))
+
+    def get_list_from_txt(self,
+                         txt_src="",
+                        sep=";"):
+        with open(txt_src) as f:
+            mylist=f.read().splitlines()
+        return mylist
+
+    def concat_dataframe(self,df1,df2,axis=1,csv_dest=""):
+        df3 = pd.concat([df1, df2], axis=1)
+        df3.to_csv(csv_dest,sep=";",index=None)
+        print("done merging %d rows"%len(df3))
+
 
 
 

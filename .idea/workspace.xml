@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae7fa7fc-8726-428e-91cd-ef2715d0564c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/runner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_doc2vec.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_fasttext.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_word2vec.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/doc2vec-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/doc2vec-master.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/note" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train_tfidf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/grouping_pegawai.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/grouping_pegawai.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hase.py" beforeDir="false" afterPath="$PROJECT_DIR$/hase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infer_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/infer_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_word2vec.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_word2vec.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/victorinox.py" beforeDir="false" afterPath="$PROJECT_DIR$/victorinox.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,10 +39,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../facenet_be" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.train_word2vec">
+  <component name="RunManager" selected="Python.train_tfidf">
     <configuration name="hase" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="doc2vec-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -66,7 +64,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="infer_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="doc2vec-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -78,7 +76,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/infer_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/preprocess.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -87,7 +85,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train_fasttext (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="train_tfidf" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="doc2vec-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -99,28 +97,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_fasttext.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="train_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="doc2vec-master" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_model.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_tfidf.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -150,13 +127,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="victorinox" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="doc2vec-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/victorinox.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.train_word2vec" />
+        <item itemvalue="Python.train_tfidf" />
         <item itemvalue="Python.hase" />
-        <item itemvalue="Python.train_fasttext (1)" />
-        <item itemvalue="Python.infer_test" />
-        <item itemvalue="Python.train_model" />
+        <item itemvalue="Python.preprocess" />
+        <item itemvalue="Python.victorinox" />
+        <item itemvalue="Python.train_word2vec" />
       </list>
     </recent_temporary>
   </component>
@@ -185,66 +183,98 @@
       <option name="project" value="LOCAL" />
       <updated>1583057479251</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test sentence vector by average word vector">
+      <created>1583258053212</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583258053212</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="prep data done. ready for embedding" />
-    <option name="LAST_COMMIT_MESSAGE" value="prep data done. ready for embedding" />
+    <MESSAGE value="test sentence vector by average word vector" />
+    <option name="LAST_COMMIT_MESSAGE" value="test sentence vector by average word vector" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="601" y="81" key="CommitChangelistDialog2" timestamp="1583057478697">
+    <state x="679" y="353" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583664711443">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state x="601" y="81" key="CommitChangelistDialog2/65.24.1855.1056@65.24.1855.1056" timestamp="1583057478697" />
-    <state width="1696" height="568" key="DebuggerActiveHint" timestamp="1583056726142">
+    <state x="679" y="353" key="#com.intellij.fileTypes.FileTypeChooser/65.24.1855.1056@65.24.1855.1056" timestamp="1583664711443" />
+    <state x="601" y="81" key="CommitChangelistDialog2" timestamp="1583258052910">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1696" height="568" key="DebuggerActiveHint/65.24.1855.1056@65.24.1855.1056" timestamp="1583056726142" />
-    <state width="1830" height="295" key="GridCell.Tab.0.bottom" timestamp="1583257835673">
+    <state x="601" y="81" key="CommitChangelistDialog2/65.24.1855.1056@65.24.1855.1056" timestamp="1583258052910" />
+    <state width="1696" height="568" key="DebuggerActiveHint" timestamp="1583687013271">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1830" height="295" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1583257835673" />
-    <state width="1830" height="295" key="GridCell.Tab.0.center" timestamp="1583257835672">
+    <state width="1696" height="568" key="DebuggerActiveHint/65.24.1855.1056@65.24.1855.1056" timestamp="1583687013271" />
+    <state x="250" y="101" key="DiffContextDialog" timestamp="1583257999862">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1830" height="295" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1583257835672" />
-    <state width="1830" height="295" key="GridCell.Tab.0.left" timestamp="1583257835672">
+    <state x="250" y="101" key="DiffContextDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1583257999862" />
+    <state x="779" y="296" width="424" height="482" key="FileChooserDialogImpl" timestamp="1583637824339">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1830" height="295" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1583257835672" />
-    <state width="1830" height="295" key="GridCell.Tab.0.right" timestamp="1583257835673">
+    <state x="779" y="296" width="424" height="482" key="FileChooserDialogImpl/65.24.1855.1056@65.24.1855.1056" timestamp="1583637824339" />
+    <state width="1832" height="275" key="GridCell.Tab.0.bottom" timestamp="1583726874892">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1830" height="295" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1583257835673" />
-    <state width="1832" height="364" key="GridCell.Tab.1.bottom" timestamp="1583056976114">
+    <state width="1832" height="275" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1583726874892" />
+    <state width="1832" height="275" key="GridCell.Tab.0.center" timestamp="1583726874892">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="364" key="GridCell.Tab.1.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1583056976114" />
-    <state width="1832" height="364" key="GridCell.Tab.1.center" timestamp="1583056976114">
+    <state width="1832" height="275" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1583726874892" />
+    <state width="1832" height="275" key="GridCell.Tab.0.left" timestamp="1583726874891">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="364" key="GridCell.Tab.1.center/65.24.1855.1056@65.24.1855.1056" timestamp="1583056976114" />
-    <state width="1832" height="364" key="GridCell.Tab.1.left" timestamp="1583056976113">
+    <state width="1832" height="275" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1583726874891" />
+    <state width="1832" height="275" key="GridCell.Tab.0.right" timestamp="1583726874892">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="364" key="GridCell.Tab.1.left/65.24.1855.1056@65.24.1855.1056" timestamp="1583056976113" />
-    <state width="1832" height="364" key="GridCell.Tab.1.right" timestamp="1583056976114">
+    <state width="1832" height="275" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1583726874892" />
+    <state width="1832" height="339" key="GridCell.Tab.1.bottom" timestamp="1583725197019">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state width="1832" height="364" key="GridCell.Tab.1.right/65.24.1855.1056@65.24.1855.1056" timestamp="1583056976114" />
+    <state width="1832" height="339" key="GridCell.Tab.1.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1583725197019" />
+    <state width="1832" height="339" key="GridCell.Tab.1.center" timestamp="1583725197018">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="339" key="GridCell.Tab.1.center/65.24.1855.1056@65.24.1855.1056" timestamp="1583725197018" />
+    <state width="1832" height="339" key="GridCell.Tab.1.left" timestamp="1583725197018">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="339" key="GridCell.Tab.1.left/65.24.1855.1056@65.24.1855.1056" timestamp="1583725197018" />
+    <state width="1832" height="339" key="GridCell.Tab.1.right" timestamp="1583725197018">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="339" key="GridCell.Tab.1.right/65.24.1855.1056@65.24.1855.1056" timestamp="1583725197018" />
     <state x="486" y="174" key="SettingsEditor" timestamp="1583227386226">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
     <state x="486" y="174" key="SettingsEditor/65.24.1855.1056@65.24.1855.1056" timestamp="1583227386226" />
-    <state x="592" y="275" key="Vcs.Push.Dialog.v2" timestamp="1583057491187">
+    <state x="592" y="275" key="Vcs.Push.Dialog.v2" timestamp="1583258066137">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state x="592" y="275" key="Vcs.Push.Dialog.v2/65.24.1855.1056@65.24.1855.1056" timestamp="1583057491187" />
-    <state x="765" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582959821173">
+    <state x="592" y="275" key="Vcs.Push.Dialog.v2/65.24.1855.1056@65.24.1855.1056" timestamp="1583258066137" />
+    <state width="926" height="513" key="XDebugger.FullValuePopup" timestamp="1583719062853">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
-    <state x="765" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/65.24.1855.1056@65.24.1855.1056" timestamp="1582959821173" />
+    <state width="926" height="513" key="XDebugger.FullValuePopup/65.24.1855.1056@65.24.1855.1056" timestamp="1583719062853" />
+    <state x="607" y="136" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583579022543">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="607" y="136" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/65.24.1855.1056@65.24.1855.1056" timestamp="1583579022543" />
+    <state x="750" y="224" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1583257983110">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="750" y="224" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1583257983110" />
+    <state x="765" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583499396787">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="765" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/65.24.1855.1056@65.24.1855.1056" timestamp="1583499396787" />
     <state x="654" y="331" key="git4idea.merge.GitPullDialog" timestamp="1582959793264">
       <screen x="65" y="24" width="1855" height="1056" />
     </state>
@@ -267,6 +297,56 @@
           <url>file://$PROJECT_DIR$/infer_test.py</url>
           <line>20</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/victorinox.py</url>
+          <line>389</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/victorinox.py</url>
+          <line>390</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/preprocess.py</url>
+          <line>131</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train_tfidf.py</url>
+          <line>89</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train_tfidf.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train_tfidf.py</url>
+          <line>107</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train_tfidf.py</url>
+          <line>176</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train_tfidf.py</url>
+          <line>206</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train_tfidf.py</url>
+          <line>215</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/preprocess.py</url>
+          <line>223</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
