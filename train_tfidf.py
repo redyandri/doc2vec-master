@@ -15,6 +15,7 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.calibration import CalibratedClassifierCV
 import heapq
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn import metrics
 
 
 
@@ -41,6 +42,7 @@ datapath_sentences=r"data/dataset_lower_clean_stem_group_staffs_sentences.csv"
 tfidf_vectors=r"data/tfidf_group_vectors.csv"
 tfidf_model=r"data/tfidf_group_model.pkl"
 knn_model=r"data/knn_group_model.pkl"
+csvsummary=r"data/dataset_lower_clean_stem_staff_group_with_periods_summary.csv"
 
 
 
@@ -122,12 +124,12 @@ knn_model=r"data/knn_group_model.pkl"
 
 
 
-df=pd.read_csv(tfidf_vectors,sep=";",header=None)
-q="application software level 1 symfoni php framework knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services seminar enterprise architecture cross platform mobile development with xamarin scrum project management workshop syncfusion framework workshop tata kelola tik bas cobit 5 international public service forum 2018 workshop mas atur presiden nomor 16 tahun 2018 ada barang jasa perintah training administrasi manajemen sdm latih uji nasional sertifikasi ahli ada barang jasa perintah"
-q2="application software level 1 symfoni php framework knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services seminar enterprise architecture cross platform mobile development with xamarin scrum project management workshop syncfusion framework workshop tata kelola tik BERbasis cobit 5 international public service forum 2018 workshop mas PERaturAN presiden nomor 16 tahun 2018 PENGadaAN barang jasa pEMerintahAN training administrasi manajemen sdm PElatihAN ujiAN nasional sertifikasi ahli PENGadaAN barang jasa pEMerintahAN "
-q3="oracle"
-transformer = TfidfTransformer()
-loaded_vec = CountVectorizer(decode_error="replace",vocabulary=pickle.load(open(tfidf_model, "rb")))
+# df=pd.read_csv(tfidf_vectors,sep=";",header=None)
+# q="application software level 1 symfoni php framework knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services seminar enterprise architecture cross platform mobile development with xamarin scrum project management workshop syncfusion framework workshop tata kelola tik bas cobit 5 international public service forum 2018 workshop mas atur presiden nomor 16 tahun 2018 ada barang jasa perintah training administrasi manajemen sdm latih uji nasional sertifikasi ahli ada barang jasa perintah"
+# q2="application software level 1 symfoni php framework knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services seminar enterprise architecture cross platform mobile development with xamarin scrum project management workshop syncfusion framework workshop tata kelola tik BERbasis cobit 5 international public service forum 2018 workshop mas PERaturAN presiden nomor 16 tahun 2018 PENGadaAN barang jasa pEMerintahAN training administrasi manajemen sdm PElatihAN ujiAN nasional sertifikasi ahli PENGadaAN barang jasa pEMerintahAN "
+# q3="oracle"
+# transformer = TfidfTransformer()
+# loaded_vec = CountVectorizer(decode_error="replace",vocabulary=pickle.load(open(tfidf_model, "rb")))
 # t1=time.time()
 # qv=transformer.fit_transform(loaded_vec.fit_transform(np.array([q2]))).toarray()[0].tolist()
 # scores=[]
@@ -150,15 +152,18 @@ loaded_vec = CountVectorizer(decode_error="replace",vocabulary=pickle.load(open(
 # print("train KNN DONE in %f"%(time.time()-t1))
 # with open(knn_model,"wb") as f:
 #     pickle.dump(knn,f)
-with open(knn_model,"rb") as f:
-    knn_saved=pickle.load(f)
-q3=tool.preprocess_sentence(q3)
-qv=transformer.fit_transform(loaded_vec.fit_transform([q3])).toarray()[0].tolist()
-(distances, indices)=knn_saved.kneighbors([qv],n_neighbors=5)
-indices=indices.tolist()[0]
-res=df.iloc[indices,-1]
-print(res.tolist())
-print(distances.tolist())
+
+
+
+# with open(knn_model,"rb") as f:
+#     knn_saved=pickle.load(f)
+# q3=tool.preprocess_sentence(q3)
+# qv=transformer.fit_transform(loaded_vec.fit_transform([q3])).toarray()[0].tolist()
+# (distances, indices)=knn_saved.kneighbors([qv],n_neighbors=5)
+# indices=indices.tolist()[0]
+# res=df.iloc[indices,-1]
+# print(res.tolist())
+# print(distances.tolist())
 
 
 
@@ -293,6 +298,34 @@ print(distances.tolist())
 # # print("prediction:%s"%str(predictions))
 # # print("best_class_indices:%s"%str(best_class_indices))
 # # print("best_class_probabilities:%s"%str(best_class_probabilities))
+
+
+#####################################################################################
+
+
+transformer = TfidfTransformer()
+loaded_vec = CountVectorizer(decode_error="replace",vocabulary=pickle.load(open(tfidf_model, "rb")))
+with open(knn_model,"rb") as f:
+    knn_saved=pickle.load(f)
+testcorpus=MyIter(csvsummary)
+ytrue=[]
+ypred=[]
+truecount=0
+for line in testcorpus:
+    parts=line.split(";")
+    id=parts[0]
+    ytrue.append(id)
+    X=parts[1].replace("."," ")
+    # q3=tool.preprocess_sentence(q3)
+    qv=transformer.fit_transform(loaded_vec.fit_transform([X])).toarray()[0].tolist()
+    y_pred=knn_saved.predict([qv])
+    ypred.append(y_pred)
+    is_true=id==y_pred[0]
+    if is_true:
+        truecount+=1
+    print("%r, accuracy:%f"%((is_true),truecount/411))
+
+print(metrics.accuracy_score(ytrue,ypred))
 
 
 

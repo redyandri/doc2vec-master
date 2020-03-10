@@ -100,17 +100,39 @@ from sklearn.calibration import CalibratedClassifierCV
 # print(ar)
 
 
-X_tr=[[1,2,3],[4,5,6]]
-y_train=[1,2]
-lr = SGDClassifier()#SGDClassifier(loss='hinge',alpha=best_alpha,class_weight='balanced')
-clf =lr.fit(X_tr, y_train)
-calibrator = CalibratedClassifierCV(clf, cv='prefit')
-model=calibrator.fit(X_tr, y_train)
-yy=clf.predict_proba([[1,2,3]])
-y_train_pred = model.predict_proba(X_tr)
-y_test_pred = model.predict_proba([[1,2,3]])
-print(yy)
-print(y_train_pred)
-print(y_test_pred)
+# X_tr=[[1,2,3],[4,5,6]]
+# y_train=[1,2]
+# lr = SGDClassifier()#SGDClassifier(loss='hinge',alpha=best_alpha,class_weight='balanced')
+# clf =lr.fit(X_tr, y_train)
+# calibrator = CalibratedClassifierCV(clf, cv='prefit')
+# model=calibrator.fit(X_tr, y_train)
+# yy=clf.predict_proba([[1,2,3]])
+# y_train_pred = model.predict_proba(X_tr)
+# y_test_pred = model.predict_proba([[1,2,3]])
+# print(yy)
+# print(y_train_pred)
+# print(y_test_pred)
+
+
+from gensim.summarization.summarizer import summarize
+import pandas as pd
+
+
+csvsrc=r"data/dataset_lower_clean_stem_staff.csv"
+
+
+# df=pd.read_csv(csvsrc,sep=";")
+# dftarget=df[df.values=="196808172003121001_syafarrudin"]#196302201983111001_dedysulistiarto"]
+# text="\n".join(dftarget.iloc[:,0])
+# print(text)
+# print("########################################################")
+# summ=summarize(text)
+# print(summ)
+# sumsentences=str(summ).splitlines()
+# print("COUNT ori:%d" %len(dftarget))
+# print("COUNT summary:%d" %len(sumsentences))
+
+txt="komitmen layan kendali gratifikasi. sampai salin surat edar menteri uang laksana pelihara data sumber daya manusia human resources information system seluruh pegawai lingkung menteri uang. upacara bendera ingat hari ulang tahun 74 merdeka republik indonesia tahun 2019 tanggal 17 agustus 2019. laksana cuti tahun hari libur nasional dan cuti sama hari raya natal tahun 2019. sampai tetap unit kerja predikat wbk tahun 2019 tingkat menteri uang. selenggara rapat kerja raker rapat koordinasi rakor. bina mental asn integritas. sampai instruksi menteri uang nomor 595 imk 01 2019 tanggal 29 juli 2019. selenggara rapat kerja raker rapat koordinasi rakor. mohon dukung video converence keikutsertaan pegawai kptik bmn giat pmo informal meeting tahun 2019. himbauan laksana wajib masuk kerja taat jam kerja lingkung sekretariat jenderal menteri uang. himbauan laksana wajib masuk kerja taat jam kerja lingkung sekretariat jenderal menteri uang. kuesioner minat beasiswa. kumpul berkas ppkpns dp3 lingkung pusintek. se tentu tega disiplin atas langgar tentu jam kerja. langkah langkah strategis laksana anggar lingkup unit eselon i sekretariat jenderal menteri uang ta 2020. himbauan kait sampai lapor harta kaya pajak pajak pribadi lalu alpha. se tentu tega disiplin atas langgar tentu jam kerja. upacara bendera rangka ingat hari sumpah pemuda hari oeang republik indonesia 73 tahun 2019. disposisi sekretaris jenderal sampai arah presiden menteri kabinet indonesia maju. sampai salin surat edar menteri uang laksana pelihara data sumber daya manusia human resources information system seluruh pegawai lingkung menteri uang. sampai surat edar menteri uang laksana pelihara data sumber daya manusia hris seluruh pegawai lingkung menteri uang. sampai salin surat edar menteri uang laksana pelihara data sumber daya manusia human resources information system seluruh pegawai lingkung menteri uang. surat tugas latih bppk pekan 3 bulan september 2019. tindak lanjut hasil one on one meeting kait najam anggar menteri uang ta 2019 ta 2020. tindak lanjut hasil one on one meeting kait najam anggar menteri uang ta 2019 ta 2020. tindak lanjut hasil one on one meeting kait najam anggar menteri uang ta 2019 ta 2020. tindak lanjut hasil one on one meeting kait najam anggar menteri uang ta 2019 ta 2020. imbau laksana isi lapor harta kaya lhk lapor pajak pajak pribadi lp2p lalu alpha. tawar seleksi sesuai inpassing jabat fungsional pranata uang anggar dapat belanja negara apbn. imbau laksana isi lapor harta kaya lhk lapor pajak pajak pribadi lp2p lalu alpha. monitoring evaluasi efektivitas organisasi lingkung menteri uang."
+print("\n".join(txt.split(".")))
 
 

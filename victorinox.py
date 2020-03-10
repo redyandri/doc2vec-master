@@ -379,7 +379,8 @@ class victorinox(object):
                          csv_dest="",
                          col_to_groupby="ID_PEGAWAI",
                          col_to_group="KOMPETENSI",
-                         sep=";"):
+                         sep=";",
+                        sentence_link=" "):
         df=pd.read_csv(csv_src,sep=sep)
         df2= df.groupby(col_to_groupby)
         ids=[]
@@ -387,7 +388,7 @@ class victorinox(object):
         for group_name, dfgroup in df2:
             groupcontent=""
             for idx, row in dfgroup.iterrows():
-                groupcontent+=str(row[col_to_group])+" "
+                groupcontent+=str(row[col_to_group])+sentence_link
             datas.append(groupcontent)
             ids.append(row[col_to_groupby])
         result={col_to_groupby:ids,

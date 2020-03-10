@@ -211,19 +211,28 @@ staff_dictionary_by_sequence_reveresed=r"data/staff_dictionary_by_sequence_rever
 
 
 
-with open(staff_dictionary_by_sequence_reveresed,"rb") as f:
-    kamus=pickle.load(f)
-corpus=MyIter(dataset_vector)
-with open(dataset_vector_idseq,"a+") as f:
-    for line in corpus:
-        parts=line.split(";")
-        vec = parts[0:-1]
-        id = parts[-1].replace("\n", "")
-        newid=str(kamus[id])
-        l=vec+[newid]
-        f.write(";".join(l))
-        f.write("\n")
+# with open(staff_dictionary_by_sequence_reveresed,"rb") as f:
+#     kamus=pickle.load(f)
+# corpus=MyIter(dataset_vector)
+# with open(dataset_vector_idseq,"a+") as f:
+#     for line in corpus:
+#         parts=line.split(";")
+#         vec = parts[0:-1]
+#         id = parts[-1].replace("\n", "")
+#         newid=str(kamus[id])
+#         l=vec+[newid]
+#         f.write(";".join(l))
+#         f.write("\n")
 
+
+
+dataset_lower_clean_stem=r"data/dataset_lower_clean_stem_staff.csv"
+dataset_lower_clean_stem_group_in_lines=r"data/dataset_lower_clean_stem_staff_group_with_periods.csv"
+tool.group_sentences(csv_src=dataset_lower_clean_stem,
+                         csv_dest=dataset_lower_clean_stem_group_in_lines,
+                         col_to_groupby="ID_PEGAWAI",
+                         sep=";",
+                     sentence_link=". ")
 
 
 
