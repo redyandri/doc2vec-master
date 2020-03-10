@@ -1,0 +1,55 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<body>
+<div class="row col-md-12">
+  <div class="col-md-6 offset-md-3">
+  <form>
+    <div class="form-group">
+      <label>Nama Kompetensi</label>
+      <input class="form-control" id="kompetensi" style="margin-bottom: 10px"
+    </div>
+    <button style="width: 100%; margin-bottom: 30px" type="button" id="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <h4 style="text-align:center">List Pegawai</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nama</th>
+        <th scope="col">NIP</th>
+        <th scope="col">Unit</th>
+      </tr>
+    </thead>
+    <tbody id="listpegawai">
+    </tbody>
+  </table>
+</div>
+
+</body>
+
+<script>
+  $('#submit').click(function (){
+    var kompetensi = $('#kompetensi').val()
+    var url = "user_by_competence?q="+kompetensi
+   $.get( url, function( data ) {
+      console.log(data)
+      json_new = JSON.parse(data)
+      var table_body = $("#listpegawai")
+      table_body.empty()
+      index = 1
+      for(x of json_new){
+        tr = $('<tr></tr>')
+        tr.append('<th scope="row">'+ index +'</th>')
+        tr.append('<td>'+x["nama"]+'</td>')
+        tr.append('<td>'+x["nip"]+'</td>')
+        tr.append('<td>'+x["unit"]+'</td>')
+        table_body.append(tr)
+        index++
+      }
+    });
+  })
+</script>
