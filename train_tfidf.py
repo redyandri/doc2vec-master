@@ -40,6 +40,7 @@ datapath_staffs=r"data/dataset_lower_clean_stem_group_staffs.csv"
 datapath_sentences=r"data/dataset_lower_clean_stem_group_staffs_sentences.csv"
 tfidf_vectors=r"data/tfidf_group_vectors.csv"
 tfidf_model=r"data/tfidf_group_model.pkl"
+knn_model=r"data/knn_group_model.pkl"
 
 
 
@@ -124,6 +125,7 @@ tfidf_model=r"data/tfidf_group_model.pkl"
 df=pd.read_csv(tfidf_vectors,sep=";",header=None)
 q="application software level 1 symfoni php framework knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services seminar enterprise architecture cross platform mobile development with xamarin scrum project management workshop syncfusion framework workshop tata kelola tik bas cobit 5 international public service forum 2018 workshop mas atur presiden nomor 16 tahun 2018 ada barang jasa perintah training administrasi manajemen sdm latih uji nasional sertifikasi ahli ada barang jasa perintah"
 q2="application software level 1 symfoni php framework knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services knowledge update tools itsm sipelantik knowledge update itsm awareness latih data services seminar enterprise architecture cross platform mobile development with xamarin scrum project management workshop syncfusion framework workshop tata kelola tik BERbasis cobit 5 international public service forum 2018 workshop mas PERaturAN presiden nomor 16 tahun 2018 PENGadaAN barang jasa pEMerintahAN training administrasi manajemen sdm PElatihAN ujiAN nasional sertifikasi ahli PENGadaAN barang jasa pEMerintahAN "
+q3="oracle"
 transformer = TfidfTransformer()
 loaded_vec = CountVectorizer(decode_error="replace",vocabulary=pickle.load(open(tfidf_model, "rb")))
 # t1=time.time()
@@ -140,18 +142,21 @@ loaded_vec = CountVectorizer(decode_error="replace",vocabulary=pickle.load(open(
 # print(res)
 # print([scores[x] for x in top5])
 # print("elapsed:%f"%elapsed)
-print("########################################")
-print("train KNN")
-t1=time.time()
-knn = KNeighborsClassifier(n_neighbors=len(df))
-knn.fit(df.iloc[:,:-1], df.iloc[:,-1])
-print("train KNN DONE in %f"%(time.time()-t1))
-q2=tool.preprocess_sentence(q2)
-qv=transformer.fit_transform(loaded_vec.fit_transform([q])).toarray()[0].tolist()
-(distances, indices)=knn.kneighbors([qv],n_neighbors=5)
+# print("########################################")
+# print("train KNN")
+# t1=time.time()
+# knn = KNeighborsClassifier(n_neighbors=len(df))
+# knn.fit(df.iloc[:,:-1], df.iloc[:,-1])
+# print("train KNN DONE in %f"%(time.time()-t1))
+# with open(knn_model,"wb") as f:
+#     pickle.dump(knn,f)
+with open(knn_model,"rb") as f:
+    knn_saved=pickle.load(f)
+q3=tool.preprocess_sentence(q3)
+qv=transformer.fit_transform(loaded_vec.fit_transform([q3])).toarray()[0].tolist()
+(distances, indices)=knn_saved.kneighbors([qv],n_neighbors=5)
 indices=indices.tolist()[0]
 res=df.iloc[indices,-1]
-elapsed=time.time()-t1
 print(res.tolist())
 print(distances.tolist())
 
