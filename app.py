@@ -44,7 +44,7 @@ def user_by_competence():
     (distances, indices) = knn.kneighbors([qv], n_neighbors=5)
     indices = indices.tolist()[0]
     res = df.iloc[indices, -1]
-    dbConn = pymssql.connect('10.242.77.202', 'ecorp', 'Pusintek2016##', "nadine")
+    dbConn = pymssql.connect('IP ADDRESS', 'USER', 'PASS', "DBNAME")
     oldCursor = dbConn.cursor()
     dbConn.commit()
     data = list(res)
